@@ -10,7 +10,7 @@
 - [Operators](#operators)
 - [Optional Type](#optional-type)
 - [Optional Binding](#optional-binding)
-- [Guard(Early Exit)](#guard)
+- [Guard (Early Exit)](#guard)
 - [Type Casting](#type-casting)
 - [Looping](#looping)
 - [Branching](#branching)
@@ -549,7 +549,7 @@ var twoTwo = 22
 swapTwoInts(&oneOne, &twoTwo)   // call by address
 print("after swap: oneOne = \(oneOne) & twoTwo = \(twoTwo)")
 ```
-
+[Top](#toc)
 
 
 
