@@ -131,6 +131,39 @@ for j in 1..<5 {
 }
 ```
 
+# Optional Type
+**use "?" after type keyword & use "!" to get (unwrap) value**
+```
+var strOptinal: String? = "optinal string"  // defualt value is 'nil'
+let strUnwrappedVal = strOptinal!
+print("\(strUnwrappedVal)")
+```
+
+**Implicitly Unwrapped Optionals**
+```
+var strAutoUnwrap: String! = "auto unwrapped optional string"
+let autoUnwrappedVal: String = strAutoUnwrap
+print("\(autoUnwrappedVal)")
+```
+
+# Optional Binding
+**'=' operator does not return. so, the follwing code is not valid**
+```
+if x = y {
+    // This is not valid, because '=' operator does not return
+}
+```
+**when someOptional is not 'nil' then 'if' block otherwise 'else' block**
+```
+var someOptional: Int? = 5
+if let valFromOptional = someOptional {
+    print("value from optional Int = \(valFromOptional)")
+}else{
+    print("no value")
+}
+```
+
+
 
 
 
