@@ -235,7 +235,7 @@ print(castedForeced.id)
 
 # Looping
 **Foor Loop with Range**
-````
+```
 for index in 0...5 {
     print("Index: \(index)")
 }
@@ -256,5 +256,76 @@ for index in stride(from: 0, to: 10, by: 2) {
 ```
 for _ in 1...10 {
     // 10 times iterations
+}
+```
+
+**While Loop**
+```
+let condition = true
+var loopCounter = 0
+
+while loopCounter <= 10 {
+    print("Counter val: \(loopCounter)")
+}
+```
+
+# Branching
+**if**
+```
+// C like: if, if else, nested if & else if ladder
+let isEven: Bool
+
+#if os(Linux)
+	isEven =  random() % 2 == 0
+#else
+	isEven = arc4random_uniform(11) % 2 == 0
+#endif
+
+if isEven {
+    print("Random number is evel")
+}else{
+    print("Random number is odd")
+}
+```
+
+**switch**
+```
+let switchVal: Int
+#if os(Linux)
+    switchVal =  random()
+#else
+    switchVal = arc4random_uniform(11)
+#endif
+
+switch switchVal {
+    case 1:
+        print("One")                // break is optional
+    case 2:
+        print("Two")
+    case 3, 4, 5:                   // C like pass through
+        print("Three/Four/Five")
+    case 6...9:                     // Range
+        print("Six to Nine")
+    case 10..<12:                   // Range
+        print("Ten to Eleven")
+    default:
+        print("More Than Eleven")
+}
+```
+
+**Switch Tuples Matching**
+```
+let tupleToSwitch = (1, 1)
+switch tupleToSwitch {
+case (0, 0):
+    print("both match")
+case (_, 0):
+    print("right match")
+case (0, _):
+    print("left match")
+case (-2...2, -2...2):
+    print("range match")
+default:
+    print("no match")
 }
 ```
