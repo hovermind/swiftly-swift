@@ -3,7 +3,7 @@
 # TOC
 - [Data Types & Variables](#data-types-and-variables)
 - [Constant](#constant)
-- [Type Inference](#tyep-inference)
+- [Type Inference](#type-inference)
 
 
 # <a name="#data-types-and-variables"></a>Data Types & Variables
@@ -30,7 +30,7 @@ let pi: Double = 3.1416
 let strSwfitIsFun: String = "Swift is fun"
 ```
 
-# <a name="#tyep-inference"></a>Type Inference
+# <a name="#type-inference"></a>Type Inference
 ```
 let piVal = 3.1416                          // type Doudle is inferred from the assigned value
 let strSwfitIsAwesome = "Swift is awesome"  // type String is inferred from the assigned value
