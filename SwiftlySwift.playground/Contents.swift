@@ -142,19 +142,106 @@ print("\(autoUnwrappedVal)")
 
 // '=' operator does not return. so, the follwing code is not valid
 
-//if x = y {
-//    // This is not valid, because '=' operator does not return
-//}
+var someOptional: Int? = 5
+
+// when someOptional is not 'nil' then 'if' block otherwise 'else' block
+if let valFromOptional = someOptional {
+    print("value from optional Int = \(valFromOptional)")
+}else{
+    print("no value")
+}
 
 
 
+/* ------------------------------------- Guard (Early Exit) ------------------------------------------------------------------------------------------------- */
+
+func process(arg: String?) {
+    guard let input = arg else { return }
+
+    // use input here safely
+}
 
 
 
+/* ------------------------------------- Type Casting ------------------------------------------------------------------------------------------------- */
+
+// does not support implicit casting, use explicit casting (using constructor of particular type)
+
+var intVal: Int = 5
+var doubleVal: Double = Double(intVal) + 5.0 // explicit casting
+
+class Test{
+    var id = 1
+}
+class SubTest: Test{
+    var subId = 11
+}
+
+var subTest = SubTest()
+
+// use 'is' to check instance of.
+if subTest is Test {
+    print("Yes, SubTest is type of Test")
+} else {
+    print("No, SubTest is not type of Test")
+}
+
+// downcasting with 'as'
+
+// 'as' throws error if the casting fails
+var casted = subTest as Test   // ok only if casting succeeds, otherwise error
+print(casted.id)
+
+// as? returs optional type & the value is 'nil' if the cast fails
+var castedOptional = subTest as? Test
+if castedOptional != nil {
+    print("casting succeeded. id = \(castedOptional!.id)")
+}else{
+    print("casting failed")
+}
+
+// or use optional binding
+if let castedOptionalBinding = subTest as? Test{
+    print("casting succeeded. id = \(castedOptionalBinding.id)")
+}else{
+    print("casting failed")
+}
+
+
+// Use 'as!' (forced form) only when you are sure that the downcast will always succeed
+// 'as!' will trigger a runtime error if you try to downcast to an incorrect class type
+
+var castedForeced = subTest as! Test   // if casting fails, there will be runtime error
+print(castedForeced.id)
+
+// as? => casted!.id
+// as! => casted.id
+
+// Type Casting for Any and AnyObject
+// 'Any' can represent an instance of any type at all, including function types.
+// 'AnyObject' can represent an instance of any class type.
 
 
 
+/* ------------------------------------- Looping ------------------------------------------------------------------------------------------------- */
 
+for index in 0...5 {
+    print("Index: \(index)")
+}
+
+for index in 0..<5 {
+   print("Index: \(index)")
+}
+
+// increament by specified value
+for index in stride(from: 0, to: 10, by: 2) {
+    print("Index: \(index)")
+}
+
+// when index variable is not needed
+for _ in 1...10 {
+    // 10 times iterations
+}
 
 
 
