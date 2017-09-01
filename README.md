@@ -3,8 +3,11 @@
 # Data Types & Variables
 
 Int, Float, Double
+
 Bool
+
 Character
+
 String
 
 **Use 'var' keyword to declare variables**
