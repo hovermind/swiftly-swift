@@ -6,23 +6,33 @@
 import UIKit
 import Foundation
 
-// data types & variables
+/* ------------------------------------- Data types & variables ------------------------------------------------------------------------------------------------- */
+
 var myVarInt: Int = 1
 var myVarDouble: Double = 1.0
 var myVarCharacter: Character = "c"        // Character: Same as C charater but double quote
 var myVarString: String = "Hello Hooman"
 
 
-// constant
+
+
+/* ------------------------------------- Constant ------------------------------------------------------------------------------------------------- */
+
 let pi: Double = 3.1416
 let strSwfitIsFun: String = "Swift is fun"
 
-// type inference
+
+
+/* ------------------------------------- Type inference ------------------------------------------------------------------------------------------------- */
+
 let piVal = 3.1416                          // type Doudle is inferred from the assigned value
 let strSwfitIsAwesome = "Swift is awesome"  // type String is inferred from the assigned value
 
 
-// tuple
+
+
+/* ------------------------------------- Tuple ------------------------------------------------------------------------------------------------- */
+
 // Tuple variable
 let origin = (1, 2)
 origin.0    // 1
@@ -41,3 +51,96 @@ let myDictonary = ["name" : "Hassan", "id" : "222"]
 for (key, val) in myDictonary{
     // use key and val here
 }
+
+
+
+/* ------------------------------------- String ------------------------------------------------------------------------------------------------- */
+
+// use '+' to concatinate String
+let strConcated = "Hello, " + "Hooman"
+
+// "\(x)" for String interpolation
+let strName = "Hassan"
+let strId = 222
+let strInterpolated = "Name: \(strName) & id: \(strId)"
+
+
+// empty check with property 'isEmpty'
+let strEmptyCheck = "not empty"
+if !strEmptyCheck.isEmpty {
+    print("String is not empty")
+}
+
+// counting number of characters
+let strCharArray = "String is array of characters"
+let noOfChars = strCharArray.characters.count
+print("No. of Characters: \(noOfChars)")
+// Swift 4: let noOfChars = strCharArray.count
+
+
+// removing white spaces
+let strWithWhiteSpaces = " hello hooman "
+
+// leading & tailing
+let strTrimmed = strWithWhiteSpaces.trimmingCharacters(in: .whitespaces)
+// removing all white spaces
+let strNoWhiteSpace = strWithWhiteSpaces.replacingOccurrences(of: " ", with: "")
+
+// array from string
+let arrayFromString = strWithWhiteSpaces.components(separatedBy: " ")
+
+
+// parsing to other type
+// returns optional & so can use optional binding
+let strIntVal = "15"
+if let strParsed = Int(strIntVal) {
+    print("parsed value = \(strParsed)")
+}
+
+
+
+/* ------------------------------------- Type Alias ------------------------------------------------------------------------------------------------- */
+typealias Feet = Int
+var distance: Feet = 100
+
+typealias Point = (Int, Int)
+let axisOrigin: Point = (0, 0)
+
+
+
+/* ------------------------------------- Operators ------------------------------------------------------------------------------------------------- */
+
+// all standard C operators : https://developer.apple.com/reference/swift/swift_standard_library_operators
+
+// Swift specific operators: Range Operator
+
+for i in 1...5 {
+    // gives 1, 2, 3, 4 and 5
+}
+
+for j in 1..<5 {
+    // gives 1, 2, 3, 4
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
