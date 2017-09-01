@@ -4,7 +4,20 @@
 - [Data Types & Variables](#data-types-and-variables)
 - [Constant](#constant)
 - [Type Inference](#type-inference)
-
+- [Tuple](#tuple)
+- [String](#string)
+- [Type Alias](#type-alias)
+- [Operators](#operators)
+- [Optional Type](#optional-type)
+- [Optional Binding](#optional-binding)
+- [Guard(Early Exit)](#guard)
+- [Type Casting](#type-casting)
+- [Looping](#looping)
+- [Branching](#branching)
+- [Array](#array)
+- [Dictionary](#dictionary)
+- [Set](#set)
+- [Function](#function)
 
 # <a name="#data-types-and-variables"></a>Data Types & Variables
 - Int, Float, Double
@@ -36,7 +49,7 @@ let piVal = 3.1416                          // type Doudle is inferred from the 
 let strSwfitIsAwesome = "Swift is awesome"  // type String is inferred from the assigned value
 ```
 
-# Tuple
+# <a name="#tuple">Tuple
 **Tuple variable**
 ```
 let origin = (1, 2)
@@ -60,7 +73,7 @@ for (key, val) in myDictonary{
 }
 ```
 
-# String
+# <a name="#string">String
 **use '+' to concatinate String**
 ```
 let strConcated = "Hello, " + "Hooman"
@@ -114,7 +127,7 @@ if let strParsed = Int(strIntVal) {
 }
 ```
 
-# Type Alias
+# <a name="#type-alias">Type Alias
 ```
 typealias Feet = Int
 var distance: Feet = 100
@@ -123,7 +136,7 @@ typealias Point = (Int, Int)
 let axisOrigin: Point = (0, 0)
 ```
 
-# Operators
+# <a name="#operators">Operators
 [all standard C operators: apple doc](https://developer.apple.com/reference/swift/swift_standard_library_operators)
 
 **Swift specific operators: Range Operator**
@@ -137,7 +150,7 @@ for j in 1..<5 {
 }
 ```
 
-# Optional Type
+# <a name="#optional-type">Optional Type
 **use "?" after type keyword & use "!" to get (unwrap) value**
 ```
 var strOptinal: String? = "optinal string"  // defualt value is 'nil'
@@ -152,7 +165,7 @@ let autoUnwrappedVal: String = strAutoUnwrap
 print("\(autoUnwrappedVal)")
 ```
 
-# Optional Binding
+# <a name="#optional-binding">Optional Binding
 **'=' operator does not return. so, the follwing code is not valid**
 ```
 if x = y {
@@ -169,7 +182,7 @@ if let valFromOptional = someOptional {
 }
 ```
 
-# Guard (Early Exit)
+# <a name="#guard">Guard (Early Exit)
 ```
 func process(arg: String?) {
     guard let input = arg else { return }
@@ -179,7 +192,7 @@ func process(arg: String?) {
 ```
 
 
-# Type Casting
+# <a name="#type-casting">Type Casting
 **does not support implicit casting, use explicit casting (using constructor of particular type)**
 ```
 var intVal: Int = 5
@@ -239,7 +252,7 @@ print(castedForeced.id)
 // 'AnyObject' can represent an instance of any class type.
 ```
 
-# Looping
+# <a name="#looping">Looping
 **For Loop with Range**
 ```
 for index in 0...5 {
@@ -273,7 +286,7 @@ while loopCounter <= 10 {
 }
 ```
 
-# Branching
+# <a name="#branching">Branching
 **if**
 ```
 // C like: if, if else, nested if & else if ladder
@@ -333,7 +346,7 @@ default:
 }
 ```
 
-# Array
+# <a name="#array">Array
 ```
 var items: Array<String> = ["Hassan", "Hovermind", "LoL"]
 ```
@@ -382,7 +395,7 @@ strings.map{ str in
 }
 ```
 
-# Dictionary
+# <a name="#dictionary">Dictionary
 ```
 var itemsMap: Dictionary<Int, String> = [0: "Hassan", 1: "Hovermind", 2: "LoL"]
 ```
@@ -442,7 +455,7 @@ airports.count;
 airports.isEmpty;
 ```
 
-# Set
+# <a name="#set">Set
 ```
 var setOne: Set<String> = Set<String>()
 ```
@@ -466,7 +479,7 @@ for item in mySet{
 }
 ```
 
-# Function
+# <a name="#function">Function
 ```
 func foo(person: String) -> String {
     return "Foo"
