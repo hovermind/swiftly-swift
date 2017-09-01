@@ -234,7 +234,7 @@ print(castedForeced.id)
 ```
 
 # Looping
-**Foor Loop with Range**
+**For Loop with Range**
 ```
 for index in 0...5 {
     print("Index: \(index)")
@@ -245,7 +245,7 @@ for index in 0..<5 {
 }
 ```
 
-**Foor Loop with Interval**
+**For Loop with Interval**
 ```
 for index in stride(from: 0, to: 10, by: 2) {
     print("Index: \(index)")
@@ -261,9 +261,7 @@ for _ in 1...10 {
 
 **While Loop**
 ```
-let condition = true
 var loopCounter = 0
-
 while loopCounter <= 10 {
     print("Counter val: \(loopCounter)")
 }
@@ -274,7 +272,6 @@ while loopCounter <= 10 {
 ```
 // C like: if, if else, nested if & else if ladder
 let isEven: Bool
-
 #if os(Linux)
 	isEven =  random() % 2 == 0
 #else
@@ -329,3 +326,127 @@ default:
     print("no match")
 }
 ```
+
+# Array
+```
+var items: Array<String> = ["Hassan", "Hovermind", "LoL"]
+```
+
+**Short-hand**
+```
+var itemsShortHand = [String]();
+```
+
+**Type inferefnce**
+```
+var itemsTypeInferred = ["Eggs", "Milk"];
+```
+
+**Multi-dimentional array**
+```
+var itemsMultiDimentional = [[String]]();
+```
+**Fixed size array with all elements having a given value**
+```
+var testArray = [Int](repeating: 5, count: 12)
+```
+
+**Property**
+```
+items.count;
+items.isEmpty;
+```
+
+**Enumerating array items**
+```
+for item in items{
+    print("Item: \(item)")
+}
+
+for (index, value) in items.enumerated() {
+    print("Value at index \(index) = \(value)")
+}
+```
+
+**Higher Order Function: Map**
+```
+var strings = ["a", "b", "c"]
+strings.map{ str in
+    return str + "0"
+}
+```
+
+# Dictionary
+```
+var itemsMap: Dictionary<Int, String> = [0: "Hassan", 1: "Hovermind", 2: "LoL"]
+```
+**Short-hand**
+```
+var itemsMapShortHand = [Int: String]();
+```
+**Type inferefnce**
+```
+var itemsMapTypeInferred = [0: "Hassan", 1: "Hovermind", 2: "LoL"]
+```
+**accessing & updating items by key**
+```
+var cars = ["N":"Nissan", "T":"Toyota", "M":"Mitsubishi", "H":"Honda", "MZ": "Mazda"]
+```
+**accessing item by key returns optional type (use optional binding)**
+```
+let brandKey = "N"
+if let brandName = cars[brandKey] {
+    print("Brand name for key \(brandKey) : \(brandName)")
+}else{
+    print("Brand does not exist for key \(brandKey)")
+}
+```
+**updating dictionary returns optional type**
+```
+var updatedVal = cars.updateValue("Nisssan", forKey: "N")
+if updatedVal != nil{
+    print("Updated val : \(updatedVal!)")
+}else{
+    print("update failed")
+}
+```
+**enumerating dictionary items**
+```
+var airports = ["HND": "Haneda", "OKA": "Naha", "DAC": "Dhaka"];
+for (key, val) in airports {
+    print("short code for \(val) is \(key)")
+}
+```
+**enumerating dictionary keys**
+```
+for airportCode in airports.keys {
+    print("\(airportCode)")
+}
+```
+**enumerating dictionary values**
+```
+for airportName in airports.values {
+    print("\(airportName)")
+}
+```
+**array from dictionary keys**
+```
+let airportCodes = [String](airports.keys)
+```
+**array from dictionary values**
+```
+let airportNames = [String](airports.values)
+```
+**property**
+```
+airports.count;
+airports.isEmpty;
+```
+
+
+
+
+
+
+
+
