@@ -391,18 +391,16 @@ var itemsMapTypeInferred = [0: "Hassan", 1: "Hovermind", 2: "LoL"]
 **accessing & updating items by key**
 ```
 var cars = ["N":"Nissan", "T":"Toyota", "M":"Mitsubishi", "H":"Honda", "MZ": "Mazda"]
-```
-**accessing item by key returns optional type (use optional binding)**
-```
+
+//accessing item by key returns optional type (use optional binding)
 let brandKey = "N"
 if let brandName = cars[brandKey] {
     print("Brand name for key \(brandKey) : \(brandName)")
 }else{
     print("Brand does not exist for key \(brandKey)")
 }
-```
-**updating dictionary returns optional type**
-```
+
+//updating item returns optional type
 var updatedVal = cars.updateValue("Nisssan", forKey: "N")
 if updatedVal != nil{
     print("Updated val : \(updatedVal!)")
@@ -417,24 +415,19 @@ for (key, val) in airports {
     print("short code for \(val) is \(key)")
 }
 ```
-**enumerating dictionary keys**
+**enumerating dictionary keys & values**
 ```
 for airportCode in airports.keys {
     print("\(airportCode)")
 }
-```
-**enumerating dictionary values**
-```
+
 for airportName in airports.values {
     print("\(airportName)")
 }
 ```
-**array from dictionary keys**
+**array from dictionary keys & values**
 ```
 let airportCodes = [String](airports.keys)
-```
-**array from dictionary values**
-```
 let airportNames = [String](airports.values)
 ```
 **property**
@@ -443,8 +436,29 @@ airports.count;
 airports.isEmpty;
 ```
 
-
-
+# Set
+```
+var setOne: Set<String> = Set<String>()
+```
+**Short Hand**
+```
+let setTwo: Set = ["lol", "lul"]      // type string is infeered
+```
+**set will ignore duplicate items**
+```
+let setThree: Set = [1, 2, 3, 3]
+for item in setThree{
+    print("item : \(item)")
+}
+```
+**creating set from array**
+```
+let myArray = [1, 2, 3, 3]
+let mySet = Set(myArray)  // duplicate items will be ignored
+for item in mySet{
+    print("item : \(item)")
+}
+```
 
 
 
