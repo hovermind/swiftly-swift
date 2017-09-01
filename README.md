@@ -1,6 +1,12 @@
-**This is kinda cheat sheet & intended for anyone who is already good at (any) programming language i.e. C#, Java**
+**This is kinda Swift cheatsheet & intended for anyone who is already good at (any) programming language i.e. C#, Java**
 
-# Data Types & Variables
+# TOC
+- [Data Types & Variables](#data-types-and-variables)
+- [Constant](#constant)
+- [Type Inference](#tyep-inference)
+
+
+# <a name="#data-types-and-variables"></a>Data Types & Variables
 - Int, Float, Double
 
 - Bool
@@ -17,14 +23,14 @@ var myVarCharacter: Character = "c"        // Character: Same as C charater but 
 var myVarString: String = "Hello Hooman"
 ```
 
-# Constant
+# <a name="#constant"></a>Constant
 **Use 'let' keyword to declare constants**
 ```
 let pi: Double = 3.1416
 let strSwfitIsFun: String = "Swift is fun"
 ```
 
-# Type Inference
+# <a name="#tyep-inference"></a>Type Inference
 ```
 let piVal = 3.1416                          // type Doudle is inferred from the assigned value
 let strSwfitIsAwesome = "Swift is awesome"  // type String is inferred from the assigned value
