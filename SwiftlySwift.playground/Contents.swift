@@ -243,6 +243,282 @@ for _ in 1...10 {
     // 10 times iterations
 }
 
+// Conditiona loop
+let condition = true
+var loopCounter = 0
+
+while loopCounter <= 10 {
+    print("Counter val: \(loopCounter)")
+}
+
+
+
+/* ------------------------------------- Branching ------------------------------------------------------------------------------------------------- */
+// IF
+// C like: if, if else, nested if & else if ladder
+let isEven: Bool
+#if os(Linux)
+    isEven =  random() % 2 == 0
+#else
+    isEven = arc4random_uniform(11) % 2 == 0
+#endif
+
+if isEven {
+    print("Random number is evel")
+}else{
+    print("Random number is odd")
+}
+
+// SWITCH
+let switchVal: Int
+#if os(Linux)
+    switchVal =  random()
+#else
+    switchVal = Int(arc4random_uniform(11))
+#endif
+
+switch switchVal {
+    case 1:
+        print("One")                // break is optional
+    case 2:
+        print("Two")
+    case 3, 4, 5:                   // C like pass through
+        print("Three/Four/Five")
+    case 6...9:                     // Range
+        print("Six to Nine")
+    case 10..<12:                   // Range
+        print("Ten to Eleven")
+    default:
+        print("More Than Eleven")
+}
+
+// Tuples matching
+let tupleToSwitch = (1, 1)
+switch tupleToSwitch {
+case (0, 0):
+    print("both match")
+case (_, 0):
+    print("right match")
+case (0, _):
+    print("left match")
+case (-2...2, -2...2):
+    print("range match")
+default:
+    print("no match")
+}
+
+
+
+/* ------------------------------------- Array ------------------------------------------------------------------------------------------------- */
+
+var items: Array<String> = ["Hassan", "Hovermind", "LoL"]
+
+// Short-hand
+var itemsShortHand = [String]();
+
+// Type inferefnce
+var itemsTypeInferred = ["Eggs", "Milk"];
+
+// Multi-dimentional array
+var itemsMultiDimentional = [[String]]();
+
+// fixed size array with all elements having a given value
+var testArray = [Int](repeating: 5, count: 12)
+
+// Property
+items.count;
+items.isEmpty;
+
+// Enumerating array items
+for item in items{
+    print("Item: \(item)")
+}
+
+for (index, value) in items.enumerated() {
+    print("Value at index \(index) = \(value)")
+}
+
+// Higher Order Function: Map
+var strings = ["a", "b", "c"]
+strings.map{ str in
+    return str + "0"
+}
+
+
+/* ------------------------------------- Dictionary ------------------------------------------------------------------------------------------------- */
+
+var itemsMap: Dictionary<Int, String> = [0: "Hassan", 1: "Hovermind", 2: "LoL"]
+
+// Short-hand
+var itemsMapShortHand = [Int: String]();
+
+// Type inferefnce
+var itemsMapTypeInferred = [0: "Hassan", 1: "Hovermind", 2: "LoL"]
+
+// accessing & updating items by key
+var cars = ["N":"Nissan", "T":"Toyota", "M":"Mitsubishi", "H":"Honda", "MZ": "Mazda"]
+
+// accessing  item by key returns optional type (use optional binding)
+let brandKey = "N"
+if let brandName = cars[brandKey] {
+    print("Brand name for key \(brandKey) : \(brandName)")
+}else{
+    print("Brand does not exist for key \(brandKey)")
+}
+
+// updating dictionary returns optional type
+var updatedVal = cars.updateValue("Nisssan", forKey: "N")
+if updatedVal != nil{
+    print("Updated val : \(updatedVal!)")
+}else{
+    print("update failed")
+}
+
+// enumerating dictionary items
+var airports = ["HND": "Haneda", "OKA": "Naha", "DAC": "Dhaka"];
+for (key, val) in airports {
+    print("short code for \(val) is \(key)")
+}
+
+// enumerating dictionary keys
+for airportCode in airports.keys {
+    print("\(airportCode)")
+}
+
+// enumerating dictionary values
+for airportName in airports.values {
+    print("\(airportName)")
+}
+
+// array from dictionary keys
+let airportCodes = [String](airports.keys)
+
+// array from dictionary values
+let airportNames = [String](airports.values)
+
+
+// property
+airports.count;
+airports.isEmpty;
+
+
+/* ------------------------------------- Set ------------------------------------------------------------------------------------------------- */
+
+var setOne: Set<String> = Set<String>()
+
+// Short Hand
+let setTwo: Set = ["lol", "lul"]      // type string is infeered
+
+// even if you put duplicate items, set will ignore it
+let setThree: Set = [1, 2, 3, 3]
+for item in setThree{
+    print("item : \(item)")
+}
+
+// creating set from array
+let myArray = [1, 2, 3, 3]
+let mySet = Set(myArray)  // duplicate items will be ignored
+for item in mySet{
+    print("item : \(item)")
+}
+
+
+/* ------------------------------------- Function ------------------------------------------------------------------------------------------------- */
+
+func foo(person: String) -> String {
+    return "Foo"
+}
+
+func sayHello() -> String {
+    return "Hello"
+}
+
+func sayHelloHooman() {
+    print("Hello, Hooman")
+}
+
+// Named argument
+// By default parameter names are labels. function call must use label
+
+func greet(pn: String) -> String {
+    return "Hello, \(pn) San"
+}
+
+let greetMgsOne = greet(pn: "Hassan") // default label is parameter name
+print(greetMgsOne)
+
+// custom label
+func greetWithLabel(personName pn: String) -> String {
+    return "Hello, \(pn) San"
+}
+let greetMgsTwo = greetWithLabel(personName: "Hassan")
+print(greetMgsTwo)
+
+
+// omitting label
+func greetWithoutLabel(_ pn: String) -> String {
+    return "Hello, \(pn) San"
+}
+let greetMgsThree = greetWithoutLabel("Hassan")
+print(greetMgsThree)
+
+
+// default value
+func greetWithDefaultVal(person: String = "Mr.Nobody") -> String {
+    return "Hello, \(person) San"
+}
+let greetMgsFour = greetWithDefaultVal()
+print(greetMgsFour)
+
+// variadic argument
+func arithmeticMean(_ numbers: Double...) -> Double {
+    return numbers.reduce(0, +)
+}
+
+let meanVal = arithmeticMean(1,2,3,4)  // can't use [1,3,5,7]
+print("Mean value = \(meanVal)")
+
+// inout ~ C# equivalent of ref/out
+func swapTwoInts(_ a: inout Int, _ b: inout Int) {
+    a = a ^ b
+    b = a ^ b
+    a = a ^ b
+}
+
+var oneOne = 11
+var twoTwo = 22
+
+swapTwoInts(&oneOne, &twoTwo)   // call by address
+print("after swap: oneOne = \(oneOne) & twoTwo = \(twoTwo)")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
