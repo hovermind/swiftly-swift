@@ -460,6 +460,83 @@ for item in mySet{
 }
 ```
 
+# Function
+```
+func foo(person: String) -> String {
+    return "Foo"
+}
+
+func sayHello() -> String {
+    return "Hello"
+}
+
+func sayHelloHooman() {
+    print("Hello, Hooman")
+}
+```
+**Named argument**
+```
+// By default parameter names are labels. function call must use label
+func greet(pn: String) -> String {
+    return "Hello, \(pn) San"
+}
+
+let greetMgsOne = greet(pn: "Hassan") // default label is parameter name
+print(greetMgsOne)
+```
+**custom parameter label**
+```
+func greetWithLabel(personName pn: String) -> String {
+    return "Hello, \(pn) San"
+}
+let greetMgsTwo = greetWithLabel(personName: "Hassan")
+print(greetMgsTwo)
+```
+**omitting parameter label**
+```
+func greetWithoutLabel(_ pn: String) -> String {
+    return "Hello, \(pn) San"
+}
+let greetMgsThree = greetWithoutLabel("Hassan")
+print(greetMgsThree)
+```
+**default value**
+```
+func greetWithDefaultVal(person: String = "Mr.Nobody") -> String {
+    return "Hello, \(person) San"
+}
+let greetMgsFour = greetWithDefaultVal()
+print(greetMgsFour)
+```
+**variadic argument**
+```
+func arithmeticMean(_ numbers: Double...) -> Double {
+    return numbers.reduce(0, +)
+}
+
+let meanVal = arithmeticMean(1,2,3,4)  // can't use [1,3,5,7]
+print("Mean value = \(meanVal)")
+```
+**inout ~ C# equivalent of ref/out**
+```
+func swapTwoInts(_ a: inout Int, _ b: inout Int) {
+    a = a ^ b
+    b = a ^ b
+    a = a ^ b
+}
+
+var oneOne = 11
+var twoTwo = 22
+
+swapTwoInts(&oneOne, &twoTwo)   // call by address
+print("after swap: oneOne = \(oneOne) & twoTwo = \(twoTwo)")
+```
+
+
+
+
+
+
 
 
 
