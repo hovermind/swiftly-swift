@@ -1,14 +1,13 @@
 **This is kinda cheat sheet & intended for anyone who is already good at (any) programming language i.e. C#, Java**
 
 # Data Types & Variables
+- Int, Float, Double
 
-Int, Float, Double
+- Bool
 
-Bool
+- Character
 
-Character
-
-String
+- String
 
 **Use 'var' keyword to declare variables**
 ```
@@ -19,7 +18,6 @@ var y: String = "Hello Hooman"
 ```
 
 # Constant
-
 **Use 'let' keyword to declare constants**
 ```
 let pi: Double = 3.1416
