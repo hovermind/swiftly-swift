@@ -256,7 +256,7 @@ for _ in 1...10 {
     // 10 times iterations
 }
 ```
-**Conditiona loop**
+**While loop**
 ```
 let condition = true
 var loopCounter = 0
@@ -285,7 +285,7 @@ if isEven {
 }
 ```
 
-***SWITCH*
+**SWITCH**
 ```
 let switchVal: Int
 #if os(Linux)
@@ -309,7 +309,7 @@ switch switchVal {
         print("More Than Eleven")
 }
 ```
-**Switch Tuples matching**
+**Switch Tuples Matching**
 ```
 let tupleToSwitch = (1, 1)
 switch tupleToSwitch {
@@ -325,11 +325,6 @@ default:
     print("no match")
 }
 ```
-
-
-
-
-
 
 
 
