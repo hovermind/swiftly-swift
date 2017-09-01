@@ -10,7 +10,7 @@
 - [Operators](#operators)
 - [Optional Type](#optional-type)
 - [Optional Binding](#optional-binding)
-- [Guard (Early Exit)](#guard)
+- [Guard (Early Exit)](#early-exit)
 - [Type Casting](#type-casting)
 - [Looping](#looping)
 - [Branching](#branching)
@@ -182,7 +182,7 @@ if let valFromOptional = someOptional {
 }
 ```
 [Top](#toc)
-# <a name="#guard">Guard (Early Exit)
+# <a name="#early-exit"></a>Guard (Early Exit)
 ```
 func process(arg: String?) {
     guard let input = arg else { return }
