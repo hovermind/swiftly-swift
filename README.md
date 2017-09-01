@@ -31,8 +31,8 @@ let strSwfitIsAwesome = "Swift is awesome"  // type String is inferred from the 
 ```
 
 # Tuple
-```
 **Tuple variable**
+```
 let origin = (1, 2)
 origin.0    // 1
 origin.1    // 2
@@ -40,12 +40,14 @@ origin.1    // 2
 let originXY = (x: 1, y: 2)
 originXY.x    // 1
 originXY.y    // 2
-
+```
 **Tuple constant**
+```
 let (name, id) = ("Hassan", 222)
 print("name: \(name) & id: \(id)")
-
+```
 **Using tupple to enumerate dictionary**
+```
 let myDictonary = ["name" : "Hassan", "id" : "222"]
 for (key, val) in myDictonary{
    // use key and val here
