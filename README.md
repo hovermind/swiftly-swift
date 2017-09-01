@@ -234,29 +234,31 @@ print(castedForeced.id)
 ```
 
 # Looping
-**with range**
+**Foor Loop with Range**
 ````
 for index in 0...5 {
     print("Index: \(index)")
 }
-
 for index in 0..<5 {
    print("Index: \(index)")
 }
 ```
-**increament by specified value**
+
+**Foor Loop with Interval**
 ```
 for index in stride(from: 0, to: 10, by: 2) {
     print("Index: \(index)")
 }
 ```
-**when index variable is not needed**
+
+**For Loop without Index Variable**
 ```
 for _ in 1...10 {
     // 10 times iterations
 }
 ```
-**While loop**
+
+**While Loop**
 ```
 let condition = true
 var loopCounter = 0
@@ -267,7 +269,7 @@ while loopCounter <= 10 {
 ```
 
 # Branching
-**IF**
+**if**
 ```
 // C like: if, if else, nested if & else if ladder
 let isEven: Bool
@@ -285,7 +287,7 @@ if isEven {
 }
 ```
 
-**SWITCH**
+**switch**
 ```
 let switchVal: Int
 #if os(Linux)
@@ -309,6 +311,7 @@ switch switchVal {
         print("More Than Eleven")
 }
 ```
+
 **Switch Tuples Matching**
 ```
 let tupleToSwitch = (1, 1)
@@ -325,7 +328,3 @@ default:
     print("no match")
 }
 ```
-
-
-
-
