@@ -1,7 +1,7 @@
 **This is kinda Swift cheatsheet & intended for anyone who is already good at (any) programming language i.e. C#, Java**
 
-# TOC
-- [Data Types & Variables](#data-types-and-variables)
+# <a name="#toc">TOC
+- [Data Types & Variables](#data-types)
 - [Constant](#constant)
 - [Type Inference](#type-inference)
 - [Tuple](#tuple)
@@ -19,7 +19,7 @@
 - [Set](#set)
 - [Function](#function)
 
-# <a name="#data-types-and-variables"></a>Data Types & Variables
+# <a name="#data-types"></a>Data Types & Variables
 - Int, Float, Double
 
 - Bool
@@ -42,13 +42,13 @@ var myVarString: String = "Hello Hooman"
 let pi: Double = 3.1416
 let strSwfitIsFun: String = "Swift is fun"
 ```
-
+[Top](#toc)
 # <a name="#type-inference"></a>Type Inference
 ```
 let piVal = 3.1416                          // type Doudle is inferred from the assigned value
 let strSwfitIsAwesome = "Swift is awesome"  // type String is inferred from the assigned value
 ```
-
+[Top](#toc)
 # <a name="#tuple">Tuple
 **Tuple variable**
 ```
@@ -72,7 +72,7 @@ for (key, val) in myDictonary{
    // use key and val here
 }
 ```
-
+[Top](#toc)
 # <a name="#string">String
 **use '+' to concatinate String**
 ```
@@ -126,7 +126,7 @@ if let strParsed = Int(strIntVal) {
     print("parsed value = \(strParsed)")
 }
 ```
-
+[Top](#toc)
 # <a name="#type-alias">Type Alias
 ```
 typealias Feet = Int
@@ -135,7 +135,7 @@ var distance: Feet = 100
 typealias Point = (Int, Int)
 let axisOrigin: Point = (0, 0)
 ```
-
+[Top](#toc)
 # <a name="#operators">Operators
 [all standard C operators: apple doc](https://developer.apple.com/reference/swift/swift_standard_library_operators)
 
@@ -149,7 +149,7 @@ for j in 1..<5 {
     // gives 1, 2, 3, 4
 }
 ```
-
+[Top](#toc)
 # <a name="#optional-type">Optional Type
 **use "?" after type keyword & use "!" to get (unwrap) value**
 ```
@@ -164,7 +164,7 @@ var strAutoUnwrap: String! = "auto unwrapped optional string"
 let autoUnwrappedVal: String = strAutoUnwrap
 print("\(autoUnwrappedVal)")
 ```
-
+[Top](#toc)
 # <a name="#optional-binding">Optional Binding
 **'=' operator does not return. so, the follwing code is not valid**
 ```
@@ -181,7 +181,7 @@ if let valFromOptional = someOptional {
     print("no value")
 }
 ```
-
+[Top](#toc)
 # <a name="#guard">Guard (Early Exit)
 ```
 func process(arg: String?) {
@@ -190,8 +190,7 @@ func process(arg: String?) {
     // use input here safely
 }
 ```
-
-
+[Top](#toc)
 # <a name="#type-casting">Type Casting
 **does not support implicit casting, use explicit casting (using constructor of particular type)**
 ```
@@ -251,7 +250,7 @@ print(castedForeced.id)
 // 'Any' can represent an instance of any type at all, including function types.
 // 'AnyObject' can represent an instance of any class type.
 ```
-
+[Top](#toc)
 # <a name="#looping">Looping
 **For Loop with Range**
 ```
@@ -285,7 +284,7 @@ while loopCounter <= 10 {
     print("Counter val: \(loopCounter)")
 }
 ```
-
+[Top](#toc)
 # <a name="#branching">Branching
 **if**
 ```
@@ -345,7 +344,7 @@ default:
     print("no match")
 }
 ```
-
+[Top](#toc)
 # <a name="#array">Array
 ```
 var items: Array<String> = ["Hassan", "Hovermind", "LoL"]
@@ -394,7 +393,7 @@ strings.map{ str in
     return str + "0"
 }
 ```
-
+[Top](#toc)
 # <a name="#dictionary">Dictionary
 ```
 var itemsMap: Dictionary<Int, String> = [0: "Hassan", 1: "Hovermind", 2: "LoL"]
@@ -454,7 +453,7 @@ let airportNames = [String](airports.values)
 airports.count;
 airports.isEmpty;
 ```
-
+[Top](#toc)
 # <a name="#set">Set
 ```
 var setOne: Set<String> = Set<String>()
@@ -478,7 +477,7 @@ for item in mySet{
     print("item : \(item)")
 }
 ```
-
+[Top](#toc)
 # <a name="#function">Function
 ```
 func foo(person: String) -> String {
