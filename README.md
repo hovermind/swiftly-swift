@@ -108,5 +108,36 @@ if let strParsed = Int(strIntVal) {
 }
 ```
 
+# Type Alias
+```
+typealias Feet = Int
+var distance: Feet = 100
+
+typealias Point = (Int, Int)
+let axisOrigin: Point = (0, 0)
+```
+
+# Operators
+[all standard C operators: apple doc](https://developer.apple.com/reference/swift/swift_standard_library_operators)
+
+**Swift specific operators: Range Operator**
+```
+for i in 1...5 {
+    // gives 1, 2, 3, 4 and 5
+}
+
+for j in 1..<5 {
+    // gives 1, 2, 3, 4
+}
+```
+
+
+
+
+
+
+
+
+
 
 
