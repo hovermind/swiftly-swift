@@ -60,7 +60,7 @@ for (key, val) in myDictonary{
 let strConcated = "Hello, " + "Hooman"
 ```
 
-**use "\()" for String interpolation**
+**use "\\\()" for String interpolation**
 ```
 let strName = "Hassan"
 let strId = 222
