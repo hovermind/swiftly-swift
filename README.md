@@ -1,4 +1,4 @@
-**This is kinda Swift cheatsheet & intended for anyone who is already good at (any) programming language i.e. C#, Java**
+**This is kinda Swift cheatsheet & intended for anyone who wants to learn swift and is already good at (any) programming language i.e. C#, Java**
 
 # <a name="#toc">TOC
 - [Data Types & Variables](#data-types)
@@ -18,6 +18,24 @@
 - [Dictionary](#dictionary)
 - [Set](#set)
 - [Function](#function)
+- [Clousers](#clousers)
+- [Function Type](#function-type)
+- [Nested Function](#nested-function)
+- [Enum](#enum)
+- [Structure](#structure)
+- [Class](#class)
+- [Initializer](#initializer)
+- [Properties](#properties)
+- [Static vs Class Type](#static-vs-class-type)
+- [Access Modifier](#access-modifier)
+- [Protocol](#protocol)
+- [Inheritance](#inheritance)
+- [Subscript](#subscript)
+- [Extension](#extension)
+- [Generic](#generic)
+- [Exception](#exception)
+- [Advanced Operator](#advanced-operator)
+- [Misc](#misc)
 
 # <a name="#data-types"></a>Data Types & Variables
 - Int, Float, Double
@@ -550,6 +568,71 @@ swapTwoInts(&oneOne, &twoTwo)   // call by address
 print("after swap: oneOne = \(oneOne) & twoTwo = \(twoTwo)")
 ```
 [Top](#toc)
+	
+# <a name="#nested-function">Nested Function
+	pending...
+[Top](#toc)
+	
+# <a name="#enum">Enum
+	pending...
+[Top](#toc)
+	
+# <a name="(#structure">Structure
+	pending...
+[Top](#toc)
+	
+# <a name="#class">Class
+	pending...
+[Top](#toc)
+	
+# <a name="#initializer">Initializer
+	pending...
+[Top](#toc)
+	
+# <a name="#properties">Properties
+	pending...
+[Top](#toc)
+	
+# <a name="#static-vs-class-type">Static vs Class Type
+	pending...
+[Top](#toc)
+	
+# <a name="#access-modifier">Access Modifier
+	pending...
+[Top](#toc)
+	
+# <a name="#protocol">Protocol
+	pending...
+[Top](#toc)
+	
+# <a name="#inheritance">Inheritance
+	pending...
+[Top](#toc)
+	
+# <a name="#subscript">Subscript
+	pending...
+[Top](#toc)
+	
+# <a name="#extension">Extension
+	pending...
+[Top](#toc)
+	
+# <a name="#generic">Generic
+	pending...
+[Top](#toc)
+	
+# <a name="#exception">Exception
+	pending...
+[Top](#toc)
+	
+# <a name="#advanced-operator">Advanced Operator
+	pending...
+[Top](#toc)
+	
+# <a name="#misc">Misc
+	pending...
+[Top](#toc)
+	
 
 
 
