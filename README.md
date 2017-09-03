@@ -18,7 +18,7 @@
 - [Dictionary](#dictionary)
 - [Set](#set)
 - [Function](#function)
-- [Clousers](#clousers)
+- [Clouser](#clouser)
 - [Function Type](#function-type)
 - [Nested Function](#nested-function)
 - [Enum](#enum)
@@ -567,6 +567,10 @@ var twoTwo = 22
 swapTwoInts(&oneOne, &twoTwo)   // call by address
 print("after swap: oneOne = \(oneOne) & twoTwo = \(twoTwo)")
 ```
+[Top](#toc)
+
+# <a name="#clouser">Clouser
+	pending...
 [Top](#toc)
 	
 # <a name="#nested-function">Nested Function
