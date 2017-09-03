@@ -572,6 +572,10 @@ print("after swap: oneOne = \(oneOne) & twoTwo = \(twoTwo)")
 # <a name="#clouser">Clouser
 	pending...
 [Top](#toc)
+
+# <a name="#function-type">Function Type
+	pending...
+[Top](#toc)
 	
 # <a name="#nested-function">Nested Function
 	pending...
