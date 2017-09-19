@@ -497,6 +497,7 @@ for item in mySet{
 ```
 [Top](#toc)
 # <a name="#function">Function
+Use ```func``` keyword to define function.
 ```
 func foo(person: String) -> String {
     return "Foo"
