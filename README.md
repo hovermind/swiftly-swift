@@ -1,7 +1,7 @@
 **This is kinda Swift cheatsheet & intended for anyone who wants to learn swift and is already good at (any) programming language i.e. C#, Java**
 
 # <a name="#toc">TOC
-- [Data Types & Variables](#data-types)
+- [Data Types and Variables](#data-types-and-variables)
 - [Constant](#constant)
 - [Type Inference](#type-inference)
 - [Tuple](#tuple)
@@ -37,7 +37,7 @@
 - [Advanced Operator](#advanced-operator)
 - [Misc](#misc)
 
-# <a name="#data-types"></a>Data Types & Variables
+# <a name="#data-types-and-variables"></a>Data Types and Variables
 - Int, Float, Double
 
 - Bool
