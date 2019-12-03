@@ -635,7 +635,7 @@ print("after swap: oneOne = \(oneOne) & twoTwo = \(twoTwo)")
 [Top](#toc)
 	
 # <a name="#advanced-operator">Advanced Operator
-	pending...
+https://docs.swift.org/swift-book/LanguageGuide/AdvancedOperators.html
 [Top](#toc)
 	
 # <a name="#misc">Misc
