@@ -40,6 +40,15 @@ class Foo {
 }
 ```
 
+## Lazy property
+```swift
+    fileprivate let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = DateUtil.defaultDateFormat
+        return formatter
+    }()
+```
+
 ## Property composition in iOS app
 If you want to use a property of type Foo in view ViewController,
 you don't have access to constructor (`init()` of ViewController would not be called).
