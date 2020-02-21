@@ -21,7 +21,7 @@ public enum FooState {
 	    return UIImage(systemName: "arrow.left.circle.fill")!
 	  case .Bax:
 	    return UIImage(systemName: "arrow.right.circle.fill")!
-	}
+    }
   }
 }
 
