@@ -36,6 +36,7 @@ for beverage in Beverage.allCases {  // allCases not AllCases
 // counting cases
 let numberOfChoices = Beverage.allCases.count   // allCases not AllCases
 ```
+
 <details><summary>More ...</summary>
 
 <details markdown="span"><summary>`.rawValue`</summary>
@@ -55,8 +56,28 @@ let possiblePlanet = Planet(rawValue: 4) // possiblePlanet is of type Planet? an
 ```
 </details>
 
+<details markdown="span"><summary>Associated Values</summary>
+```swift
+enum Barcode {
+    case upc(Int, Int, Int, Int)
+    case qrCode(String)
+}
+
+var productBarcode = Barcode.upc(8, 85909, 51226, 3)
+productBarcode = .qrCode("ABCDEFGHIJKLMNOP")
+
+switch productBarcode {
+case .upc(let numberSystem, let manufacturer, let product, let check):
+    print("UPC: \(numberSystem), \(manufacturer), \(product), \(check).")
+case .qrCode(let productCode):
+    print("QR code: \(productCode).")
+}
+// Prints "QR code: ABCDEFGHIJKLMNOP."
+```
+</details>
+
 <details markdown="span"><summary>Links</summary>
-	* https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html#
+  * https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html#
 </details>
 
 </details>
