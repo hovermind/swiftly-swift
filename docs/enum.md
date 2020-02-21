@@ -5,6 +5,9 @@ public enum FooState {
   case Bar
   case Bax
 }
+public enum FooState {
+  case Bar, Bax
+}
 
 
 // enum property + switch self => provide related value
@@ -12,7 +15,7 @@ public enum FooState {
   case Bar
   case Bax
   
-  var icon: UIImage {
+  var icon: UIImage {  // icon according to state
     switch self { // must satisfy all cases
 	  case .Bar:
 	    return UIImage(systemName: "arrow.left.circle.fill")!
