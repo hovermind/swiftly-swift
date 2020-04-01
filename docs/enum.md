@@ -1,15 +1,18 @@
-## Enum
+## Simple declaration
 ```swift
-// simple declaration
 public enum FooState {
   case Bar
   case Bax
 }
+
+// or
 public enum FooState {
   case Bar, Bax
 }
+```
 
-
+## Enum property
+```swift
 // enum property + switch self => provide related value
 public enum FooState {
   case Bar
@@ -24,8 +27,10 @@ public enum FooState {
     }
   }
 }
+```
 
-
+## Iterating over enum values
+```
 // Iterating over enum cases
 enum Beverage: CaseIterable {
     case coffee, tea, juice
@@ -35,6 +40,36 @@ for beverage in Beverage.allCases {  // allCases not AllCases
 }
 // counting cases
 let numberOfChoices = Beverage.allCases.count   // allCases not AllCases
+```
+
+## To and from rawValue
+```swift
+
+// raw value to enum
+let fooVal = 1 // or getFooVal()
+let updateType = FooUpdate(rawValue: fooVal) // optional
+
+if let ut = updateType, ut = .UpdateAvailable {
+  // update xyz
+}
+
+// enum to raw value
+let intVal = FooUpdate.UpdateAvailable.rawValue // 1
+
+public enum FooUpdate: Int {
+    
+    case UpdateAvailable = 1
+    case Updated = 2
+    
+    public var associatedMessage: String {
+        switch self {
+        case .UpdateAvailable:
+            return "update available"
+        default:
+            return "updated"
+        }
+    }
+}
 ```
 
 <details><summary>More ...</summary>
